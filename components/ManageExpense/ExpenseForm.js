@@ -120,15 +120,7 @@ function ExpenseForm({ onCancel, onSubmit, submitButtonLabel, defaultValues }) {
           </Text>
         )}
         <View style={styles.buttons}>
-          <Button
-            style={styles.button}
-            mode="flat"
-            onPress={() => {
-             // console.log("Cancel pressed");
-              Keyboard.dismiss();
-              onCancel();
-            }}
-          >
+          <Button style={styles.button} mode="flat" onPress={onCancel}>
             Cancel
           </Button>
           <Button style={styles.button} onPress={submitHandler}>
