@@ -4,7 +4,9 @@ import { GlobalStyles } from "../../constants/styles";
 function Button({ children, onPress, mode, style }) {
   return (
     <View style={style}>
-      <Pressable onPress={onPress} style={({pressed})=> pressed && styles.pressed  }
+      <Pressable
+        onPress={onPress}
+        style={({ pressed }) => pressed && styles.pressed}
         hitSlop={
           Platform.OS === "ios"
             ? { top: 40, bottom: 40, left: 40, right: 40 }
